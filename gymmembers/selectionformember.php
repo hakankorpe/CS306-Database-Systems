@@ -13,9 +13,8 @@ if (!empty($_POST['age'])){
       array_push($list, $row["name"]);
       //echo "Selected gym names are: " . $row["gym_name"];
 }
-    echo "Selected members that their age is bigger than" . $age . " are: ";
+    echo "Selected members that their age is bigger than " . $age . " are: ";
     $size_of_criteria = sizeof($list);
-    echo " " . $size_of_criteria;
     while ($size_of_criteria > 0){
       while ($size_of_criteria > 1){
 

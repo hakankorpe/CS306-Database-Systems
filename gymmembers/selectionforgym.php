@@ -13,13 +13,17 @@ if (!empty($_POST['rating'])){
       array_push($list, $row["gym_name"]);
       //echo "Selected gym names are: " . $row["gym_name"];
 }
-    echo "Selected gym names are: ";
-    $size_of_criteria = sizeof($list);
-    echo " " . $size_of_criteria;
-    while ($size_of_criteria > 0){
-      echo " " . $list[$size_of_criteria-1];
-      $size_of_criteria = $size_of_criteria - 1;
-  }
+echo "Selected gyms that their rating is bigger than " . $rating . " are: ";
+$size_of_criteria = sizeof($list);
+while ($size_of_criteria > 0){
+  while ($size_of_criteria > 1){
+
+    echo " " . $list[$size_of_criteria-1] . ",";
+    $size_of_criteria = $size_of_criteria - 1;
+}
+  echo " " . $list[$size_of_criteria-1];
+  $size_of_criteria = $size_of_criteria - 1;
+}
 }
 else
 {
