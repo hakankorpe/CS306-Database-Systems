@@ -19,7 +19,7 @@ if (!empty($_POST['gym_name'])){
     VALUES ('$gym_name', $rating, '$gym_address', '$availability', $capacity)";
 
     $result = mysqli_query($db, $sql_statement);
-    echo "Your result is: " . $availability . $result;
+    echo "You have successfully added gym to database, its availability is: " . $availability;
 }
 else
 {

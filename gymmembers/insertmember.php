@@ -13,7 +13,7 @@ if (!empty($_POST['name'])){
     VALUES ('$name', $age, '$phone_number', $price, '$until')";
 
     $result = mysqli_query($db, $sql_statement);
-    echo "Your result is: " . $result;
+    echo "You have successfully signed up.";
 }
 else
 {
