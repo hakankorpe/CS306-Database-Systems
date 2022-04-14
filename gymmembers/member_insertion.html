@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    input[type=text], select {
+      font-family: 'Merriweather', serif;
+      width: 23rem;
+      padding: 12px 20px;
+      margin: 0.1rem 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      text-align:center;
+      background-color: #66BFBF;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    h3 {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+}
+    .button2 {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 15px 2px;
+      cursor: pointer;
+      } /* Blue */
+      .btn {
+  background: #11cdd4;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.button2:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .inserting-member {
+      background-color: #E4F9F5;
+      text-align: center;
+
+  }
+    </style>
+  </head>
+  <body>
+    <div class="inserting-member">
+
+    <form action="insertmember.php" method="POST">
+      <h3>Member Name:</h3>
+    	<input type="text" id="name" name="name" placeholder="Type your name"><br>
+      <h3>Member Age:</h3>
+        <input type="text" id="age" name="age" placeholder="Type your age"><br>
+      <h3>Phone number:</h3>
+        <input type="text" id="phone_number" name="phone_number" placeholder="Type your phone number"><br>
+        <h3>Price:</h3>
+        <input type="text" id="price" name="price" placeholder="Type the price of your membership"><br>
+        <h3>Until:</h3>
+        <input type="text" id="until" name="until" placeholder="Type the date of your membership"><br>
+
+    	<button class="button2">SIGN UP</button>
+    </form>
+    </div>
+  </body>
+</html>

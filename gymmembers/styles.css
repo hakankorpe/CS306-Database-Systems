@@ -1,0 +1,28 @@
+body {
+  color: #40514E;
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  color: #000000;
+  font-size: 5.625rem;
+  margin: 0;
+  padding: 0;
+  font-family: 'Sacramento', cursive;
+}
+
+h2 {
+  color: #AAAAAA;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+}
