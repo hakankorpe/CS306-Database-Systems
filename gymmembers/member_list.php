@@ -9,6 +9,11 @@ table {
     border-collapse: collapse;
 width: 100%;
 }
+.space {
+  width: 4px;
+  height: auto;
+  display: inline-block;
+}
 
 td, th {
 border: 1px solid #dddddd;
@@ -19,6 +24,10 @@ padding: 8px;
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+a {
+            color: #05ff05;
+            text-decoration: none;
+        }
 </style>
 
 </head>
@@ -28,7 +37,7 @@ tr:nth-child(even) {
 
 <table>
 
-<tr> <th> NAME </th> <th> AGE </th> <th>PHONE NUMBER</th> <th> DATE </th> <th> PRICE </th </tr>
+<tr> <th> NAME </th> <th> AGE </th> <th>PHONE NUMBER</th> <th> DATE </th> <th> MEMBER TYPE </th </tr>
 
 <?php
 
@@ -40,19 +49,52 @@ $result = mysqli_query($db, $sql_statement);
 
 while($row = mysqli_fetch_assoc($result))
 {
+    $m_id = $row['membership_id'];
     $name = $row['name'];
     $age = $row['age'];
     $phone_number = $row['phone_number'];
     $until = $row['until'];
     $price = $row['price'];
 
-    echo "<tr>" . "<th>" . $name . "</th>" . "<th>" . $age . "</th>" . "<th>" . $phone_number . "</th>" . "<th>" . $until . "</th>" . "<th>" . $price . "</th>" . "</tr>";
+    $type = ($price > 200) ? "Premium" : 'Standard';
+
+
+    $personal_trainer = ($price % 2 == 1) ? "Angela Merkel" : "Boris Johnson";
+
+    $pool_use = ($price > 500) ? 1 : 0;
+
+    $time_limit = ($price > 100) ? 6 : 1;
+
+    $sql_statement = ($type == "Premium") ?
+    "INSERT INTO premium_members(name, age, phone_number, price, until, premium_id, personal_trainer, pool_use)
+    VALUES ('$name', $age, '$phone_number', $price, '$until', $m_id, '$personal_trainer', $pool_use)" :
+    "INSERT INTO standard_members(name, age, phone_number, price, until, standard_id, time_limit)
+    VALUES ('$name', $age, '$phone_number', $price, '$until', $m_id, $time_limit)";
+
+    $member_type = mysqli_query($db, $sql_statement);
+
+
+
+    echo "<tr>" . "<th>" . $name . "</th>" . "<th>" . $age . "</th>" . "<th>" . $phone_number . "</th>" . "<th>" . $until . "</th>" . "<th>" . $type . "</th>" . "</tr>";
 }
+
+
 
 ?>
 
 </table>
 </div>
-
+<html>
+<body>
+  <a href="http://localhost/gymmembers/member_insertion.html" >
+ <button>Add a member</button>
+</a>
+<div class="space">
+  </div>
+<a href="http://localhost/gymmembers/gym_insertion.html">
+<button>Add a gym</button>
+</a>
+</body>
+</html>
 </body>
 </html>
