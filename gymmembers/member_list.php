@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Members</title>
-
+<link rel="stylesheet" href="styles.css">
 <style>
 table {
     font-family: arial, sans-serif;
@@ -37,7 +37,7 @@ a {
 
 <table>
 
-<tr> <th> NAME </th> <th> AGE </th> <th>PHONE NUMBER</th> <th> DATE </th> <th> MEMBER TYPE </th </tr>
+<tr> <th> NAME </th> <th> AGE </th> <th>PHONE NUMBER</th> <th> DATE </th> <th> MEMBER TYPE </th> </tr>
 
 <?php
 
@@ -86,13 +86,28 @@ while($row = mysqli_fetch_assoc($result))
 </div>
 <html>
 <body>
-  <a href="http://localhost/gymmembers/member_insertion.html" >
+  <a href="http://localhost/gymmembers/member_insertion.html">
  <button>Add a member</button>
 </a>
 <div class="space">
   </div>
 <a href="http://localhost/gymmembers/gym_insertion.html">
 <button>Add a gym</button>
+</a>
+<div class="space">
+  </div>
+<a href="http://localhost/gymmembers/premium_member_list.php">
+<button>Premium members</button>
+</a>
+<div class="space">
+  </div>
+<a href="http://localhost/gymmembers/standard_member_list.php">
+<button>Standard members</button>
+</a>
+<div class="space">
+  </div>
+<a href="http://localhost/gymmembers/gym_list.php">
+<button> GO TO GYM LIST</button>
 </a>
 </body>
 </html>
