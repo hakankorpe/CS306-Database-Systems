@@ -4,6 +4,12 @@
 <title>GYMs</title>
 <link rel="stylesheet" href="styles.css">
 <style>
+body {
+background-color: #f2f2f2;
+margin: 0;
+text-align: center;
+font-family: 'Merriweather', serif;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;

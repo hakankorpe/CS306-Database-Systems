@@ -5,6 +5,12 @@
 <title>Premium GYM Members</title>
 
 <style>
+body {
+background-color: #f2f2f2;
+margin: 0;
+text-align: center;
+font-family: 'Merriweather', serif;
+}
 input[type=text], select {
   width: 23rem;
   padding: 12px 20px;
