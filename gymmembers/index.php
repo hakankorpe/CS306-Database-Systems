@@ -4,6 +4,22 @@
 	<title>MAIN PAGE</title>
 
 <style>
+.dumb-img-right{
+
+		position: absolute;
+    right: 10px;
+    top: 10px;
+		width: 150px;
+		transform: rotate(45deg);
+}
+.dumb-img-left{
+
+    position:absolute;
+    left: 10px;
+    top: 10px;
+		width: 150px;
+		transform: rotate(-45deg);
+}
 input[type=text], select {
   width: 23rem;
   padding: 12px 20px;
@@ -68,6 +84,9 @@ include "member_list.php";
 <?php
 include "selection.html";
 ?>
+
+<img class="dumb-img-right" src="dumb.png" alt="Dumbbell image">
+<img class="dumb-img-left" src="dumb.png" alt="Dumbbell image">
 </div>
 </body>
 </html>
