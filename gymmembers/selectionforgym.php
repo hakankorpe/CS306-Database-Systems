@@ -3,16 +3,38 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
-    <title>
-    </title>
+    <title> GYMs that are selected</title>
     <style>
-    body {
-      color: #40514E;
-      margin: 0;
-      text-align: center;
-      font-family: 'Merriweather', serif;
-      background-color: white;
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+    width: 100%;
     }
+    .space {
+      width: 4px;
+      height: auto;
+      display: inline-block;
+    }
+    body {
+    background-color: #f2f2f2;
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    }
+
+    td, th {
+    border: 1px solid #dddddd;
+        text-align: left;
+    padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    a {
+                color: #05ff05;
+                text-decoration: none;
+            }
     #selection_rating_output {
       color: #11999E;
       font-size: 1.5rem;
@@ -24,6 +46,14 @@
     </style>
   </head>
   <body>
+    <div align="center">
+        <br>
+        <h2>Here is the filtered GYMs in our database:</h2>
+        <br>
+        <br>
+    <table>
+
+    <tr> <th> NAME </th> <th> RATING </th> <th>ADDRESS</th> <th> AVAILABILITY </th> <th> CAPACITY </th </tr>
     <?php
 
     include "config.php";
@@ -31,36 +61,33 @@
     if (!empty($_POST['rating'])){
         $rating = $_POST['rating'];
 
-        $sql_statement = "SELECT gym_id, gym_name FROM GYM WHERE rating > $rating";
-        $list = array();
+        $sql_statement = "SELECT * FROM GYM";
 
         $result = mysqli_query($db, $sql_statement);
-        while ($row = mysqli_fetch_assoc($result)) {
-          array_push($list, $row["gym_name"]);
-          //echo "Selected gym names are: " . $row["gym_name"];
-    }
-    echo "Selected gyms that their rating is bigger than $rating are: ";
-    echo "</br>";
-    #echo "Selected gyms that their rating is bigger than " . $rating . " are: ";
-    $size_of_criteria = sizeof($list);
-    while ($size_of_criteria > 0){
-      while ($size_of_criteria > 1){
 
-        echo " " . $list[$size_of_criteria-1] . ",";
-        $size_of_criteria = $size_of_criteria - 1;
-    }
-      echo " " . $list[$size_of_criteria-1];
-      $size_of_criteria = $size_of_criteria - 1;
-    }
-    }
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $gym_name = $row['gym_name'];
+            $rating = $row['rating'];
+            $gym_address = $row['gym_address'];
+            $availability = ($row['availability'] == 1) ? "Available" : "Not Available";
+            $capacity = $row['capacity'];
+
+
+            echo "<tr>" . "<th>" . $gym_name . "</th>" . "<th>" . $rating . "</th>" . "<th>" . $gym_address . "</th>" . "<th>" . $availability . "</th>" . "<th>" . $capacity . "</th>" . "</tr>";
+        }
+      }
+
     else
     {
         echo "You did not enter any selection criteria.";
     }
     echo "</div>";
-
     ?>
-    <br>
-    <INPUT TYPE="button" VALUE="Back" onClick="history.go(-1);">
+
   </body>
+</table>
+<br>
+<INPUT TYPE="button" VALUE="Go Back" onClick="history.go(-1);">
+</div>
 </html>
