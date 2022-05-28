@@ -85,6 +85,11 @@ while($row = mysqli_fetch_assoc($result))
 <a href="http://localhost/gymmembers/gym_insertion.html">
 <button>Add a gym</button>
 </a>
+<div class="space">
+  </div>
+<a href="http://localhost/gymmembers/index.php">
+<button>Go to main page</button>
+</a>
 </body>
 </html>
 </body>
