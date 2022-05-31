@@ -70,7 +70,7 @@
             $gym_name = $row['gym_name'];
             $rating = $row['rating'];
             $gym_address = $row['gym_address'];
-            $availability = ($row['availability'] == 1) ? "Available" : "Not Available";
+            $availability = $row['availability'];
             $capacity = $row['capacity'];
 
 

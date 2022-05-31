@@ -63,7 +63,7 @@ while($row = mysqli_fetch_assoc($result))
     $gym_name = $row['gym_name'];
     $rating = $row['rating'];
     $gym_address = $row['gym_address'];
-    $availability = ($row['availability'] == 1) ? "Available" : "Not Available";
+    $availability = ($row['availability'] == "Available") ? "Available" : "Not Available";
     $capacity = $row['capacity'];
 
 
