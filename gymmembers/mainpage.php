@@ -85,7 +85,6 @@ include "member_list.php";
 include "selection.html";
 ?>
 
-
 <img class="dumb-img-right" src="dumb.png" alt="Dumbbell image">
 <img class="dumb-img-left" src="dumb.png" alt="Dumbbell image">
 </div>
