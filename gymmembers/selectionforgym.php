@@ -61,7 +61,7 @@
     if (!empty($_POST['rating'])){
         $rating = $_POST['rating'];
 
-        $sql_statement = "SELECT * FROM GYM";
+        $sql_statement = "SELECT * FROM GYM WHERE rating > $rating";
 
         $result = mysqli_query($db, $sql_statement);
 
