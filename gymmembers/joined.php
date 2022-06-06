@@ -5,11 +5,11 @@ include "config.php";
 if (!empty($_POST['membership_id']) && !empty($_POST['gym_id'])){
     $membership_id = $_POST['membership_id'];
     $gym_id = $_POST['gym_id'];
-    $role = $_POST['role'];
-    $wage = $_POST['wage'];
+    $since = $_POST['since'];
 
-    $sql_statement = "INSERT INTO works(membership_id, gym_id, role, wage)
-    VALUES ($membership_id, $gym_id, '$role', $wage)";
+
+    $sql_statement = "INSERT INTO joined(membership_id, gym_id, since)
+    VALUES ($membership_id, $gym_id, $since)";
 
 
 

@@ -24,7 +24,13 @@ if (!empty($_POST['membership_id']) && !empty($_POST['gym_id'])){
     $member_type = mysqli_query($db, $sql_statement_2); */
 
       $result = mysqli_query($db, $sql_statement);
-      echo "You have successfully signed up.";
+      if($result == 1){
+        echo "You have successfully signed up.";
+      }
+      else{
+        echo "Your input is not valid!";
+      }
+
 
 
 }
