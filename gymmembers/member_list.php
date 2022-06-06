@@ -102,7 +102,7 @@ while($row = mysqli_fetch_assoc($result))
 <button> GO TO GYM LIST</button>
 </a>
 <div class="space">
-  </div>
+</div><br>
 <?php
 
 
@@ -120,6 +120,26 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
   </a>
   <div class="space">
     </div>
+    <a href="http://localhost/gymmembers/provides.html">
+    <button>Add a provides relationship</button>
+    </a>
+    <div class="space">
+      </div>
+      <a href="http://localhost/gymmembers/uses.html">
+      <button>Add an uses relationship</button>
+      </a>
+      <div class="space">
+        </div>
+        <a href="http://localhost/gymmembers/works.html">
+        <button>Add a works relationship</button>
+        </a>
+        <div class="space">
+          </div>
+          <a href="http://localhost/gymmembers/joined.html">
+          <button>Add a joined relationship</button>
+          </a>
+          <div class="space">
+          </div><br>
     <a href="logout.php"><button>Logout</button></a>
     <div class="space">
       </div>
