@@ -31,7 +31,7 @@ input[type=text], select {
 
 input[type=submit] {
   width: 23rem;
-  background-color: #4CAF50;
+  background-color: #4B0082;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -41,12 +41,12 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #4B0082;
 }
 
 .button2 {
   width: 23rem;
-  background-color: #4CAF50;
+  background-color: #4B0082;
   border: none;
   color: white;
   padding: 15px 32px;

@@ -32,7 +32,7 @@
         background-color: #dddddd;
     }
     a {
-                color: #05ff05;
+                color: #6A5ACD;
                 text-decoration: none;
             }
     #selection_rating_output {

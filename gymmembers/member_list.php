@@ -29,7 +29,7 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 a {
-            color: #05ff05;
+            color: #4B0082;
             text-decoration: none;
         }
 </style>
@@ -88,7 +88,21 @@ while($row = mysqli_fetch_assoc($result))
 
 </table>
 </div>
-
+<a href="http://localhost/gymmembers/premium_member_list.php">
+<button>Premium members</button>
+</a>
+<div class="space">
+  </div>
+<a href="http://localhost/gymmembers/standard_member_list.php">
+<button>Standard members</button>
+</a>
+<div class="space">
+  </div>
+<a href="http://localhost/gymmembers/gym_list.php">
+<button> GO TO GYM LIST</button>
+</a>
+<div class="space">
+  </div>
 <?php
 
 
@@ -96,9 +110,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 
  ?>
 
-  <a href="logout.php"><button>Logout</button></a>
-  <div class="space">
-    </div>
     <a href="http://localhost/gymmembers/member_insertion.html">
    <button>Add a member</button>
   </a>
@@ -109,21 +120,20 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
   </a>
   <div class="space">
     </div>
+    <a href="logout.php"><button>Logout</button></a>
+    <div class="space">
+      </div>
     <?php
+}else {
+?>
+  <a href="login.php"><button>Login</button></a>
+  <div class="space">
+  </div>
+  <a href="register.html"><button>Register</button></a>
+  <div class="space">
+  </div>
+<?php
 }
 ?>
-  <a href="http://localhost/gymmembers/premium_member_list.php">
-  <button>Premium members</button>
-  </a>
-  <div class="space">
-    </div>
-  <a href="http://localhost/gymmembers/standard_member_list.php">
-  <button>Standard members</button>
-  </a>
-  <div class="space">
-    </div>
-  <a href="http://localhost/gymmembers/gym_list.php">
-  <button> GO TO GYM LIST</button>
-  </a>
   </body>
   </html>
