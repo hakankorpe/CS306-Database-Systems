@@ -40,7 +40,7 @@
       background-color: #66BFBF;
     }
     h3 {
-  color: #11999E;
+  color: #6A5ACD;
   font-family: 'Montserrat', sans-serif;
 }
 h4 {
@@ -79,12 +79,12 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .button2:hover {
-  background: #30e3cb;
-  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
-  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  background: #6A5ACD;
+  background-image: -webkit-linear-gradient(top, #6A5ACD, #2F4F4F);
+  background-image: -moz-linear-gradient(top, #6A5ACD, #2F4F4F);
+  background-image: -ms-linear-gradient(top, #6A5ACD, #2F4F4F);
+  background-image: -o-linear-gradient(top, #6A5ACD, #2F4F4F);
+  background-image: linear-gradient(to bottom, #6A5ACD, #2F4F4F);
   text-decoration: none;
 }
 
