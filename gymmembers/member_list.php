@@ -100,9 +100,28 @@ while($row = mysqli_fetch_assoc($result))
   </div>
 <a href="http://localhost/gymmembers/gym_list.php">
 <button> GO TO GYM LIST</button>
+</a><br>
+<div class="space">
+  </div>
+  <a href="http://localhost/gymmembers/provides_table.php">
+  <button> Provides Table</button>
 </a>
 <div class="space">
-</div><br>
+  </div>
+<a href="http://localhost/gymmembers/joined_table.php">
+<button> Joined Table</button>
+</a>
+<div class="space">
+  </div>
+<a href="http://localhost/gymmembers/uses_table.php">
+<button> Uses Table</button>
+</a>
+<div class="space">
+  </div>
+<a href="http://localhost/gymmembers/works_table.php">
+<button> Works Table</button>
+</a>
+      <br>
 <?php
 
 
